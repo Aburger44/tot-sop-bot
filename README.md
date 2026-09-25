@@ -12,6 +12,7 @@ branch maps to one instruction a human can carry out.
 ## Install
 
 ```bash
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 playwright install chromium
 ```
@@ -19,7 +20,9 @@ playwright install chromium
 ## Use
 
 ```bash
-python main.py
+python main.py                       # play as fast as the bot can
+python main.py --click-interval 0.4  # the same rules at roughly human speed
+python main.py --url <arcade url>    # the timed, scored game
 ```
 
 It opens the page and then **waits**. You load the game and pick the mode; it
@@ -40,7 +43,33 @@ while game.refresh():                       # one screenshot per tick
             lift.dispatch()
 ```
 
-Write your strategy in [`main.py`](main.py); it lists the full readable surface.
+### The strategy
+
+[`main.py`](main.py) plays by four rules, built on one observation: only one
+elevator can be on the track at a time, so the track sets the throughput and
+everything upstream exists to keep it fed.
+
+1. **Never leave the track idle.** When it reads Track Ready, dispatch the car
+   that has been armed longest.
+2. **Always have the next car ready.** Load elevators while another is out.
+3. **Send full cars.** Hold for 21 waiting, unless holding would starve the next
+   stage, in which case go with whoever is there. Load only takes the people
+   waiting at that moment: 21 closes the doors by itself, fewer leaves them open,
+   so the bot closes them by hand (Entrance for a TV room, Doors for an elevator).
+   An elevator's doors also have to be opened with Doors before Load works.
+4. **Never keep a cue waiting.** Start Preshow and Unload are pressed the moment
+   they turn orange.
+
+Every decision is printed with its reason, so the run log reads as a draft of the
+procedure:
+
+```
+   41.3s  Elevator 2       load           21 waiting: a full car
+   44.0s  Elevator 1       dispatch       armed, doors closed, track ready
+```
+
+The patience timings are constants at the top of `main.py`. A full game is about
+12 real minutes, so try one change per run and compare the scores.
 
 ## How it works
 
@@ -158,7 +187,7 @@ there, and the bot waits instead of acting on a misread.
 python -m tools.verify_layout          # annotate the calibration frames
 python -m tools.verify_layout --live   # annotate a frame from the running game
 python -m tools.benchmark              # what perception costs on your machine
-python -m pytest                       # 56 assertions against the screenshots
+python -m pytest                       # perception and strategy, against the screenshots
 ```
 
 The test suite runs the whole stack against PNGs with no browser. That is what

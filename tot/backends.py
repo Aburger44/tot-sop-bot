@@ -115,15 +115,17 @@ RUFFLE_CONFIG: dict[str, Any] = {
 #: Flags that matter, and why:
 #:   backgrounding  a window that loses focus otherwise gets throttled to 1 Hz,
 #:                  and the screencast stops with it
-#:   mute-audio     the game's sound is pure cost to us, and muting it also stops
-#:                  Ruffle wanting a click to unmute
+#:   autoplay       lets the game's sound play without a click first; the unmute
+#:                  overlay is hidden in RUFFLE_CONFIG for the same reason
+#:
+#: --mute-audio is added only when ``mute=True``: the sound costs the bot nothing
+#: it needs, but it is part of watching the ride.
 #:
 #: Deliberately absent: --disable-frame-rate-limit and --disable-gpu-vsync. They
 #: bought a few ms back when every tick asked for a screenshot, and uncapping a
 #: compositor is a plausible way to make a real display flicker. The screencast
 #: takes frames at whatever rate the page paints, so neither is needed.
 _CHROME_ARGS = (
-    "--mute-audio",
     "--autoplay-policy=no-user-gesture-required",
     "--disable-background-timer-throttling",
     "--disable-backgrounding-occluded-windows",
@@ -202,6 +204,7 @@ class PlaywrightBackend:
         frame_wait_ms: int = 60,
         ruffle_config: dict[str, Any] | None = None,
         debug_dir: str | Path | None = "debug_output",
+        mute: bool = False,
     ):
         try:
             from playwright.sync_api import sync_playwright
@@ -222,6 +225,8 @@ class PlaywrightBackend:
         self._scale = 1.0
 
         args = list(_CHROME_ARGS)
+        if mute:
+            args.append("--mute-audio")
         # A maximised window is the one way to be sure the whole game is on screen
         # without the bot ever needing to move the page to see part of it.
         if viewport is None and not headless:

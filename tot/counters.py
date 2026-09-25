@@ -138,6 +138,28 @@ class Templates:
         return bool(scores[order[0]] - runner >= MIN_MARGIN)
 
 
+def looks_like_zero(patch: np.ndarray) -> bool:
+    """A closed ring with nothing in the middle — a ``0`` and no other digit.
+
+    The correlation match alone is fragile here: rendered at a different scale or
+    sub-pixel offset than the calibration frames, a live ``0`` can score closer
+    to ``6``. The shape is not ambiguous, though. ``6``, ``8`` and ``9`` all put
+    ink across the middle; ``0`` is the only one whose centre column is empty
+    from a quarter of the way down to three quarters, with ink down both sides.
+    """
+    h, w = patch.shape
+    if h < 7 or w < 4 or w > h:
+        return False
+    ink = patch > (float(patch.min()) + float(patch.max())) / 2
+    rows = slice(int(h * 0.25), int(np.ceil(h * 0.75)))
+    mid = w // 2
+    centre = ink[rows, max(1, mid - w // 6) : min(w - 1, mid + w // 6 + 1)]
+    left = ink[rows, : max(1, w // 3)].any(axis=1)
+    right = ink[rows, w - max(1, w // 3) :].any(axis=1)
+    top, bottom = ink[: max(1, h // 4), 1:-1].any(), ink[-max(1, h // 4) :, 1:-1].any()
+    return bool(not centre.any() and left.all() and right.all() and top and bottom)
+
+
 class CounterReader:
     """Classifies a counter box. Never raises — an unreadable box is ``OTHER``."""
 
@@ -147,7 +169,8 @@ class CounterReader:
     def read(self, frame: np.ndarray, rect: Rect) -> Count:
         glyphs = cut_glyphs(frame, rect, max_glyphs=2)
         if len(glyphs) == 1:
-            return Count.ZERO if self.templates.is_char(glyphs[0], "0") else Count.OTHER
+            g = glyphs[0]
+            return Count.ZERO if looks_like_zero(g) or self.templates.is_char(g, "0") else Count.OTHER
         if len(glyphs) == 2 and self.templates.is_char(glyphs[0], "2"):
             return Count.FULL if self.templates.is_char(glyphs[1], "1") else Count.OTHER
         return Count.OTHER

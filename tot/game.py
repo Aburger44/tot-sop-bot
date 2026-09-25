@@ -79,7 +79,7 @@ class Game:
         """
         backend_kw = {
             k: kw.pop(k)
-            for k in ("viewport", "timeout_ms", "frame_wait_ms", "ruffle_config", "debug_dir")
+            for k in ("viewport", "timeout_ms", "frame_wait_ms", "ruffle_config", "debug_dir", "mute")
             if k in kw
         }
         return cls(PlaywrightBackend(url=url, headless=headless, **backend_kw), **kw)

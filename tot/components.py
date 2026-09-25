@@ -193,6 +193,14 @@ class TVRoom(_Queued):
     def toggle_enabled(self) -> bool:
         return self._press("enable")
 
+    def toggle_entrance(self) -> bool:
+        """Close (or open) the entrance by hand. A room that reaches 21 closes it
+        on its own; a partly filled one needs this before the preshow can start."""
+        return self._press("entrance")
+
+    def toggle_exit(self) -> bool:
+        return self._press("exit")
+
 
 class Elevator(_Queued):
     """One of the three elevators: its queue, its doors, and its dispatch."""

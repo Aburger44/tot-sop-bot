@@ -8,6 +8,7 @@ venv/
 
 # Run output
 debug_output/
+runs/
 
 # OS
 .DS_Store
@@ -17,3 +18,5 @@ Thumbs.db
 # Those screenshots are calibration source data and must be committed.
 # tot/templates.npz is also committed: it is derived from them.
 !tot/templates.npz
+
+docs/CODEBASE_EXPLAINED.md
