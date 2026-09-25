@@ -235,7 +235,7 @@ class Elevator(_Queued):
 
     @property
     def can_load(self) -> bool:
-        return self.load_button is LoadState.READY
+        return self.load_button is LoadState.PROMPTED
 
     @property
     def is_loading(self) -> bool:

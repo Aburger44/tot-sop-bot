@@ -1,0 +1,186 @@
+{"t": 0.015, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 15.584, "kind": "inferred_state", "key": "control.automatic_doors", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 15.585, "kind": "inferred_state", "key": "control.ride_sfx", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 15.585, "kind": "inferred_state", "key": "control.tv_room_sound", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 0.008, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 16.381, "kind": "inferred_state", "key": "control.automatic_doors", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 16.383, "kind": "inferred_state", "key": "control.ride_sfx", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 16.384, "kind": "inferred_state", "key": "control.tv_room_sound", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 21.862, "kind": "action", "key": "control.attraction", "button": "Attraction", "state_when_clicked": "CLOSED", "gloss": "the button reads Attraction Closed \u2014 no guests are entering", "cue_age_s": 5.488, "clock": null}
+{"t": 25.115, "kind": "action", "key": "tv_room1.enable", "button": "TV room enable", "state_when_clicked": "DISABLED", "gloss": "the room is switched off and takes no guests", "cue_age_s": 8.741, "clock": null}
+{"t": 27.643, "kind": "state_change", "key": "tv_room1.load", "from": "UNAVAILABLE", "to": "READY", "gloss": "Load TV Room is available", "clock": null}
+{"t": 27.644, "kind": "state_change", "key": "tv_room1.unload", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Unload TV Room is idle \u2014 there is nothing to unload", "clock": null}
+{"t": 27.645, "kind": "state_change", "key": "tv_room1.entrance", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Entrance is closed", "clock": null}
+{"t": 27.645, "kind": "state_change", "key": "tv_room1.exit", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Exit is closed", "clock": null}
+{"t": 27.646, "kind": "state_change", "key": "tv_room1.enable", "from": "DISABLED", "to": "ENABLED", "gloss": "the room is in service", "clock": null}
+{"t": 27.647, "kind": "state_change", "key": "tv_room1.preshow", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Start Preshow is idle \u2014 the room is not ready for a preshow", "clock": null}
+{"t": 27.652, "kind": "state_change", "key": "control.attraction", "from": "CLOSED", "to": "ACTIVE", "gloss": "the button reads Attraction Active \u2014 the ride is open", "clock": null}
+{"t": 27.66, "kind": "state_change", "key": "tv_room1.waiting", "from": 0, "to": 1}
+{"t": 27.663, "kind": "state_change", "key": "control.front_waiting", "from": 0, "to": 5}
+{"t": 30.462, "kind": "state_change", "key": "tv_room1.waiting", "from": 1, "to": 4}
+{"t": 30.466, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 32.967, "kind": "state_change", "key": "tv_room1.waiting", "from": 4, "to": 7}
+{"t": 35.436, "kind": "state_change", "key": "tv_room1.waiting", "from": 7, "to": 9}
+{"t": 35.441, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 38.07, "kind": "state_change", "key": "tv_room1.waiting", "from": 9, "to": 12}
+{"t": 38.074, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 40.633, "kind": "state_change", "key": "tv_room1.waiting", "from": 12, "to": 14}
+{"t": 40.64, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 43.392, "kind": "state_change", "key": "tv_room1.waiting", "from": 14, "to": 17}
+{"t": 43.396, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 45.708, "kind": "state_change", "key": "tv_room1.waiting", "from": 17, "to": 20}
+{"t": 48.151, "kind": "state_change", "key": "tv_room1.waiting", "from": 20, "to": 21}
+{"t": 48.155, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 51.035, "kind": "action", "key": "tv_room1.load", "button": "Load TV Room", "state_when_clicked": "READY", "gloss": "Load TV Room is available", "cue_age_s": 23.392, "clock": null}
+{"t": 0.009, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 15.226, "kind": "inferred_state", "key": "control.automatic_doors", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 15.227, "kind": "inferred_state", "key": "control.ride_sfx", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 15.228, "kind": "inferred_state", "key": "control.tv_room_sound", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 20.594, "kind": "action", "key": "control.attraction", "button": "Attraction", "state_when_clicked": "CLOSED", "gloss": "the button reads Attraction Closed \u2014 no guests are entering", "cue_age_s": 5.372, "clock": null}
+{"t": 23.53, "kind": "action", "key": "tv_room1.enable", "button": "TV room enable", "state_when_clicked": "DISABLED", "gloss": "the room is switched off and takes no guests", "cue_age_s": 8.308, "clock": null}
+{"t": 26.03, "kind": "state_change", "key": "tv_room1.load", "from": "UNAVAILABLE", "to": "READY", "gloss": "Load TV Room is available", "clock": null}
+{"t": 26.03, "kind": "state_change", "key": "tv_room1.unload", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Unload TV Room is idle \u2014 there is nothing to unload", "clock": null}
+{"t": 26.031, "kind": "state_change", "key": "tv_room1.entrance", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Entrance is closed", "clock": null}
+{"t": 26.031, "kind": "state_change", "key": "tv_room1.exit", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Exit is closed", "clock": null}
+{"t": 26.031, "kind": "state_change", "key": "tv_room1.enable", "from": "DISABLED", "to": "ENABLED", "gloss": "the room is in service", "clock": null}
+{"t": 26.032, "kind": "state_change", "key": "tv_room1.preshow", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Start Preshow is idle \u2014 the room is not ready for a preshow", "clock": null}
+{"t": 26.038, "kind": "state_change", "key": "control.attraction", "from": "CLOSED", "to": "ACTIVE", "gloss": "the button reads Attraction Active \u2014 the ride is open", "clock": null}
+{"t": 26.044, "kind": "state_change", "key": "tv_room1.waiting", "from": 0, "to": 1}
+{"t": 26.048, "kind": "state_change", "key": "control.front_waiting", "from": 0, "to": 4}
+{"t": 28.515, "kind": "state_change", "key": "tv_room1.waiting", "from": 1, "to": 3}
+{"t": 28.517, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 30.799, "kind": "state_change", "key": "tv_room1.waiting", "from": 3, "to": 6}
+{"t": 30.802, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 33.088, "kind": "state_change", "key": "tv_room1.waiting", "from": 6, "to": 8}
+{"t": 33.091, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 35.366, "kind": "state_change", "key": "tv_room1.waiting", "from": 8, "to": 10}
+{"t": 37.619, "kind": "state_change", "key": "tv_room1.waiting", "from": 10, "to": 13}
+{"t": 37.622, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 39.922, "kind": "state_change", "key": "tv_room1.waiting", "from": 13, "to": 15}
+{"t": 42.162, "kind": "state_change", "key": "tv_room1.waiting", "from": 15, "to": 17}
+{"t": 42.165, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 44.428, "kind": "state_change", "key": "tv_room1.waiting", "from": 17, "to": 20}
+{"t": 44.431, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 46.79, "kind": "state_change", "key": "tv_room1.waiting", "from": 20, "to": 21}
+{"t": 46.793, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 49.146, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 8}
+{"t": 51.928, "kind": "action", "key": "tv_room1.load", "button": "Load TV Room", "state_when_clicked": "READY", "gloss": "Load TV Room is available", "cue_age_s": 25.899, "clock": null}
+{"t": 0.006, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 9.195, "kind": "inferred_state", "key": "control.automatic_doors", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 9.196, "kind": "inferred_state", "key": "control.ride_sfx", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 9.196, "kind": "inferred_state", "key": "control.tv_room_sound", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 0.008, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 9.612, "kind": "inferred_state", "key": "control.automatic_doors", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 9.613, "kind": "inferred_state", "key": "control.ride_sfx", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 9.614, "kind": "inferred_state", "key": "control.tv_room_sound", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 18.929, "kind": "action", "key": "control.attraction", "button": "Attraction", "state_when_clicked": "CLOSED", "gloss": "the button reads Attraction Closed \u2014 no guests are entering", "cue_age_s": 9.323, "clock": null}
+{"t": 21.813, "kind": "action", "key": "tv_room1.enable", "button": "TV room enable", "state_when_clicked": "DISABLED", "gloss": "the room is switched off and takes no guests", "cue_age_s": 12.206, "clock": null}
+{"t": 24.142, "kind": "state_change", "key": "tv_room1.load", "from": "UNAVAILABLE", "to": "READY", "gloss": "Load TV Room is available", "clock": null}
+{"t": 24.143, "kind": "state_change", "key": "tv_room1.unload", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Unload TV Room is idle \u2014 there is nothing to unload", "clock": null}
+{"t": 24.144, "kind": "state_change", "key": "tv_room1.entrance", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Entrance is closed", "clock": null}
+{"t": 24.146, "kind": "state_change", "key": "tv_room1.exit", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Exit is closed", "clock": null}
+{"t": 24.148, "kind": "state_change", "key": "tv_room1.enable", "from": "DISABLED", "to": "ENABLED", "gloss": "the room is in service", "clock": null}
+{"t": 24.149, "kind": "state_change", "key": "tv_room1.preshow", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Start Preshow is idle \u2014 the room is not ready for a preshow", "clock": null}
+{"t": 24.157, "kind": "state_change", "key": "control.attraction", "from": "CLOSED", "to": "ACTIVE", "gloss": "the button reads Attraction Active \u2014 the ride is open", "clock": null}
+{"t": 24.163, "kind": "state_change", "key": "tv_room1.waiting", "from": 0, "to": 1}
+{"t": 24.169, "kind": "state_change", "key": "control.front_waiting", "from": 0, "to": 4}
+{"t": 26.536, "kind": "state_change", "key": "tv_room1.waiting", "from": 1, "to": 3}
+{"t": 28.059, "kind": "state_change", "key": "tv_room1.waiting", "from": 3, "to": 5}
+{"t": 0.011, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 10.864, "kind": "inferred_state", "key": "control.automatic_doors", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 10.866, "kind": "inferred_state", "key": "control.ride_sfx", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 10.867, "kind": "inferred_state", "key": "control.tv_room_sound", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 20.094, "kind": "action", "key": "control.attraction", "button": "Attraction", "state_when_clicked": "CLOSED", "gloss": "the button reads Attraction Closed \u2014 no guests are entering", "cue_age_s": 9.235, "clock": null}
+{"t": 22.997, "kind": "action", "key": "tv_room1.enable", "button": "TV room enable", "state_when_clicked": "DISABLED", "gloss": "the room is switched off and takes no guests", "cue_age_s": 12.139, "clock": null}
+{"t": 0.009, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 0.007, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 10.949, "kind": "inferred_state", "key": "control.automatic_doors", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 10.951, "kind": "inferred_state", "key": "control.ride_sfx", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 10.952, "kind": "inferred_state", "key": "control.tv_room_sound", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 16.095, "kind": "action", "key": "control.attraction", "button": "Attraction", "state_when_clicked": "CLOSED", "gloss": "the button reads Attraction Closed \u2014 no guests are entering", "cue_age_s": 5.156, "clock": null}
+{"t": 18.736, "kind": "state_change", "key": "control.attraction", "from": "CLOSED", "to": "ACTIVE", "gloss": "the button reads Attraction Active \u2014 the ride is open", "clock": null}
+{"t": 18.745, "kind": "state_change", "key": "control.front_waiting", "from": 0, "to": 3}
+{"t": 21.354, "kind": "action", "key": "tv_room1.enable", "button": "TV room enable", "state_when_clicked": "DISABLED", "gloss": "the room is switched off and takes no guests", "cue_age_s": 10.414, "clock": null}
+{"t": 23.668, "kind": "state_change", "key": "tv_room1.load", "from": "UNAVAILABLE", "to": "READY", "gloss": "Load TV Room is available", "clock": null}
+{"t": 23.668, "kind": "state_change", "key": "tv_room1.unload", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Unload TV Room is idle \u2014 there is nothing to unload", "clock": null}
+{"t": 23.669, "kind": "state_change", "key": "tv_room1.entrance", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Entrance is closed", "clock": null}
+{"t": 23.669, "kind": "state_change", "key": "tv_room1.exit", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Exit is closed", "clock": null}
+{"t": 23.67, "kind": "state_change", "key": "tv_room1.enable", "from": "DISABLED", "to": "ENABLED", "gloss": "the room is in service", "clock": null}
+{"t": 23.671, "kind": "state_change", "key": "tv_room1.preshow", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Start Preshow is idle \u2014 the room is not ready for a preshow", "clock": null}
+{"t": 23.681, "kind": "state_change", "key": "tv_room1.waiting", "from": 0, "to": 3}
+{"t": 23.684, "kind": "state_change", "key": "control.front_waiting", "from": 3, "to": 5}
+{"t": 25.956, "kind": "state_change", "key": "tv_room1.waiting", "from": 3, "to": 5}
+{"t": 28.147, "kind": "state_change", "key": "tv_room1.waiting", "from": 5, "to": 8}
+{"t": 28.15, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 30.35, "kind": "state_change", "key": "tv_room1.waiting", "from": 8, "to": 10}
+{"t": 32.499, "kind": "state_change", "key": "tv_room1.waiting", "from": 10, "to": 12}
+{"t": 34.745, "kind": "state_change", "key": "tv_room1.waiting", "from": 12, "to": 14}
+{"t": 34.749, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 37.028, "kind": "state_change", "key": "tv_room1.waiting", "from": 14, "to": 17}
+{"t": 37.032, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 39.296, "kind": "state_change", "key": "tv_room1.waiting", "from": 17, "to": 19}
+{"t": 41.767, "kind": "state_change", "key": "tv_room1.waiting", "from": 19, "to": 21}
+{"t": 41.77, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 44.096, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 7}
+{"t": 47.225, "kind": "action", "key": "tv_room1.load", "button": "Load TV Room", "state_when_clicked": "READY", "gloss": "Load TV Room is available", "cue_age_s": 23.558, "clock": null}
+{"t": 0.007, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 10.835, "kind": "inferred_state", "key": "control.automatic_doors", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 10.837, "kind": "inferred_state", "key": "control.ride_sfx", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 10.838, "kind": "inferred_state", "key": "control.tv_room_sound", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 15.957, "kind": "action", "key": "control.attraction", "button": "Attraction", "state_when_clicked": "CLOSED", "gloss": "the button reads Attraction Closed \u2014 no guests are entering", "cue_age_s": 5.128, "clock": null}
+{"t": 18.59, "kind": "state_change", "key": "control.attraction", "from": "CLOSED", "to": "ACTIVE", "gloss": "the button reads Attraction Active \u2014 the ride is open", "clock": null}
+{"t": 18.599, "kind": "state_change", "key": "control.front_waiting", "from": 0, "to": 3}
+{"t": 21.16, "kind": "action", "key": "tv_room1.enable", "button": "TV room enable", "state_when_clicked": "DISABLED", "gloss": "the room is switched off and takes no guests", "cue_age_s": 10.331, "clock": null}
+{"t": 23.427, "kind": "state_change", "key": "tv_room1.load", "from": "UNAVAILABLE", "to": "READY", "gloss": "Load TV Room is available", "clock": null}
+{"t": 23.428, "kind": "state_change", "key": "tv_room1.unload", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Unload TV Room is idle \u2014 there is nothing to unload", "clock": null}
+{"t": 23.429, "kind": "state_change", "key": "tv_room1.entrance", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Entrance is closed", "clock": null}
+{"t": 23.43, "kind": "state_change", "key": "tv_room1.exit", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Exit is closed", "clock": null}
+{"t": 23.43, "kind": "state_change", "key": "tv_room1.enable", "from": "DISABLED", "to": "ENABLED", "gloss": "the room is in service", "clock": null}
+{"t": 23.431, "kind": "state_change", "key": "tv_room1.preshow", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Start Preshow is idle \u2014 the room is not ready for a preshow", "clock": null}
+{"t": 23.445, "kind": "state_change", "key": "tv_room1.waiting", "from": 0, "to": 3}
+{"t": 23.449, "kind": "state_change", "key": "control.front_waiting", "from": 3, "to": 5}
+{"t": 25.7, "kind": "state_change", "key": "tv_room1.waiting", "from": 3, "to": 5}
+{"t": 28.121, "kind": "state_change", "key": "tv_room1.waiting", "from": 5, "to": 8}
+{"t": 28.124, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 30.413, "kind": "state_change", "key": "tv_room1.waiting", "from": 8, "to": 10}
+{"t": 32.749, "kind": "state_change", "key": "tv_room1.waiting", "from": 10, "to": 12}
+{"t": 32.752, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 35.166, "kind": "state_change", "key": "tv_room1.waiting", "from": 12, "to": 15}
+{"t": 35.169, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 37.383, "kind": "state_change", "key": "tv_room1.waiting", "from": 15, "to": 17}
+{"t": 39.675, "kind": "state_change", "key": "tv_room1.waiting", "from": 17, "to": 19}
+{"t": 39.678, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 41.919, "kind": "state_change", "key": "tv_room1.waiting", "from": 19, "to": 21}
+{"t": 44.635, "kind": "action", "key": "tv_room1.load", "button": "Load TV Room", "state_when_clicked": "READY", "gloss": "Load TV Room is available", "cue_age_s": 21.208, "clock": null}
+{"t": 0.017, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 0.011, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 0.023, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 17.362, "kind": "inferred_state", "key": "control.automatic_doors", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 17.365, "kind": "inferred_state", "key": "control.ride_sfx", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 17.366, "kind": "inferred_state", "key": "control.tv_room_sound", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 0.015, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}
+{"t": 11.83, "kind": "inferred_state", "key": "control.automatic_doors", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 11.831, "kind": "inferred_state", "key": "control.ride_sfx", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 11.831, "kind": "inferred_state", "key": "control.tv_room_sound", "state": "ON", "note": "this colour was never observed on this button in the calibration screenshots; the meaning is inferred"}
+{"t": 17.332, "kind": "action", "key": "control.attraction", "button": "Attraction", "state_when_clicked": "CLOSED", "gloss": "the button reads Attraction Closed \u2014 no guests are entering", "cue_age_s": 5.508, "clock": null}
+{"t": 20.07, "kind": "state_change", "key": "control.attraction", "from": "CLOSED", "to": "ACTIVE", "gloss": "the button reads Attraction Active \u2014 the ride is open", "clock": null}
+{"t": 20.081, "kind": "state_change", "key": "control.front_waiting", "from": 0, "to": 3}
+{"t": 23.177, "kind": "action", "key": "tv_room1.enable", "button": "TV room enable", "state_when_clicked": "DISABLED", "gloss": "the room is switched off and takes no guests", "cue_age_s": 11.353, "clock": null}
+{"t": 26.113, "kind": "state_change", "key": "tv_room1.load", "from": "UNAVAILABLE", "to": "READY", "gloss": "Load TV Room is available", "clock": null}
+{"t": 26.114, "kind": "state_change", "key": "tv_room1.unload", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Unload TV Room is idle \u2014 there is nothing to unload", "clock": null}
+{"t": 26.114, "kind": "state_change", "key": "tv_room1.entrance", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Entrance is closed", "clock": null}
+{"t": 26.115, "kind": "state_change", "key": "tv_room1.exit", "from": "UNAVAILABLE", "to": "CLOSED", "gloss": "Exit is closed", "clock": null}
+{"t": 26.116, "kind": "state_change", "key": "tv_room1.enable", "from": "DISABLED", "to": "ENABLED", "gloss": "the room is in service", "clock": null}
+{"t": 26.116, "kind": "state_change", "key": "tv_room1.preshow", "from": "UNAVAILABLE", "to": "IDLE", "gloss": "Start Preshow is idle \u2014 the room is not ready for a preshow", "clock": null}
+{"t": 26.129, "kind": "state_change", "key": "tv_room1.waiting", "from": 0, "to": 4}
+{"t": 26.132, "kind": "state_change", "key": "control.front_waiting", "from": 3, "to": 5}
+{"t": 28.994, "kind": "state_change", "key": "tv_room1.waiting", "from": 4, "to": 7}
+{"t": 31.641, "kind": "state_change", "key": "tv_room1.waiting", "from": 7, "to": 10}
+{"t": 31.644, "kind": "state_change", "key": "control.front_waiting", "from": 5, "to": 4}
+{"t": 34.721, "kind": "state_change", "key": "tv_room1.waiting", "from": 10, "to": 13}
+{"t": 37.641, "kind": "state_change", "key": "tv_room1.waiting", "from": 13, "to": 16}
+{"t": 40.433, "kind": "state_change", "key": "tv_room1.waiting", "from": 16, "to": 19}
+{"t": 43.087, "kind": "state_change", "key": "tv_room1.waiting", "from": 19, "to": 21}
+{"t": 43.094, "kind": "state_change", "key": "control.front_waiting", "from": 4, "to": 5}
+{"t": 46.753, "kind": "action", "key": "tv_room1.load", "button": "Load TV Room", "state_when_clicked": "READY", "gloss": "Load TV Room is available", "cue_age_s": 20.64, "clock": null}
+{"t": 0.023, "kind": "run_start", "on_unknown": "raise", "min_click_interval": 0.0}

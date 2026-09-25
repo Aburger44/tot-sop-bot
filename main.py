@@ -54,7 +54,9 @@ URL = DEFAULT_URL
 # All 27 clickable buttons: 8 across the TV rooms, 12 across the elevators,
 # 7 on RideControl. Track and every counter are read-only.
 # --------------------------------------------------------------------------
-
+START_ELEVATOR_2 = False # to know if elevator 2 can be started
+START_ELEVATOR_3 = False # to know if elevator 3 can be started
+START_TVRM_2 = False # to know if tvrm 1 has been loaded
 
 def play(game: Game) -> None:
     """One pass of your strategy. Called in a loop, once per frame.
@@ -62,32 +64,99 @@ def play(game: Game) -> None:
     ``game`` has already been refreshed, so every property below describes the
     same instant. Do not refresh in here.
     """
+    global START_ELEVATOR_2, START_ELEVATOR_3, START_TVRM_2
     # Open the attraction, once. This is safe to write as a plain "if it is not
     # open, open it" even though the loop runs 24 times a second: a button is not
     # pressed again until the panel has actually changed in response, so the
     # press below happens once and the rest are suppressed. Every action returns
     # True if it pressed and False if it was suppressed, if you want to know.
+
+    # Start Ride
     if not game.control.attraction_is_active:
         game.control.toggle_attraction()
-        return
 
-    # ------------------------------------------------------------------
-    # Strategy starts here. A rule is one observable and one click:
-    #
-    #     for room in game.tv_rooms.values():
-    #         if room.preshow_ready:            # Start Preshow has turned orange
-    #             room.start_preshow()
-    #         elif room.unload_ready:           # Unload has turned orange
-    #             room.unload()
-    #         elif room.can_load and room.waiting_is_full:
-    #             room.load()                   # a full 21 are queued
-    #
-    #     for lift in game.elevators.values():
-    #         if lift.can_dispatch and not game.track.is_locked:
-    #             lift.dispatch()
-    #         elif lift.can_load and not lift.waiting_is_zero:
-    #             lift.load()
-    # ------------------------------------------------------------------
+    """
+    ==============
+    TV Room Logic
+    ==============
+    """
+    # Enable Rooms
+    if not game.tv_room1.enabled:
+        game.tv_room1.toggle_enabled()
+
+    if not game.tv_room2.enabled and START_TVRM_2:
+        game.tv_room2.toggle_enabled()
+
+    # Load Rooms
+    if game.tv_room1.can_load and game.tv_room1.waiting_is_full:
+        game.tv_room1.load()
+        START_TVRM_2 = True
+
+    if game.tv_room2.can_load and game.tv_room2.waiting_is_full:
+        game.tv_room2.load()
+
+    # Preshows
+    if game.tv_room1.preshow_ready:
+        game.tv_room1.start_preshow()
+
+    if game.tv_room2.preshow_ready:
+        game.tv_room2.start_preshow()
+
+    # Unloading
+    if game.tv_room1.unload_ready and not game.tv_room1.is_unloading:
+        game.tv_room1.unload()
+    
+    if game.tv_room2.unload_ready and not game.tv_room1.is_unloading:
+        game.tv_room2.unload()
+
+    """
+    ==============
+    Elevators Logic
+    ==============
+    """
+    # Enable Elevators
+    if not game.elevator1.enabled:
+        game.elevator1.toggle_enabled()
+
+    if not game.elevator2.enabled and START_ELEVATOR_2:
+        game.elevator2.toggle_enabled()
+
+    if not game.elevator3.enabled and START_ELEVATOR_3:
+        game.elevator3.toggle_enabled()
+
+    # Door Controls
+    if game.elevator1.doors_are_closed and not game.elevator1.is_loading and not game.elevator1.loaded_is_full:
+        game.elevator1.toggle_doors()
+
+    if game.elevator2.enabled and game.elevator2.doors_are_closed and not game.elevator2.is_loading and not game.elevator2.can_dispatch:
+        game.elevator2.toggle_doors()
+
+    if game.elevator3.enabled and game.elevator3.doors_are_closed and not game.elevator3.is_loading and not game.elevator3.loaded_is_full:
+        game.elevator3.toggle_doors()
+
+    # Elevator Loading
+    if game.elevator1.can_load and game.elevator1.waiting_is_full:
+        START_ELEVATOR_2 = True
+        game.elevator1.load()
+
+    if game.elevator2.enabled and game.elevator2.can_load and game.elevator2.waiting_is_full:
+        START_ELEVATOR_3 = True
+        game.elevator2.load()
+
+    if game.elevator3.enabled and game.elevator3.can_load and game.elevator3.waiting_is_full:
+        game.elevator3.load()
+
+    # Dispatch Elevator
+    if game.elevator1.loaded_is_full and game.track.is_ready:
+        game.elevator1.dispatch()
+
+    if game.elevator2.enabled and game.elevator2.can_dispatch and game.track.is_ready:
+        game.elevator2.dispatch()
+
+    if game.elevator3.enabled and game.elevator3.loaded_is_full and game.track.is_ready:
+        game.elevator3.dispatch()
+
+    return
 
 
 def main() -> None:
